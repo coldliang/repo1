@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="plan_sync">
+        <item>从客户端同步到web端</item>
+        <item>从web端同步到客户端</item>
+    </string-array>
+    
+</resources>

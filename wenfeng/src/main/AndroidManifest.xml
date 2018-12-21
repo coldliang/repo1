@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.cqupt">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" ></uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" ></uses-permission>
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"
+        android:anyDensity="true"
+        />
+
+    <application
+        android:name="com.cqupt.application.MyApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <receiver
+            android:name="com.cqupt.receiver.NetStateChangeReceiver"
+            >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- common -->
+
+        <activity
+            android:name="com.cqupt.ui.common.MainActivity"
+            android:theme="@style/Theme.BackgroundTranslucent"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.cqupt.ui.common.SetActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.LoginActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.CommentListActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.SearchActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.PreviewPictureActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.AudioRecordActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.FileExploreActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.FullScreenVideoActivity"
+            android:screenOrientation="landscape"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.ChooseMainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.FreeStudyDoingPlanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.FreeStudyTopResourceSelectActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.FreeStudySecondResourceSelectActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.ChooseSecondLevelActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.DonePlanTestActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity
+            android:name="com.cqupt.ui.common.DoingPlanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            >
+        </activity>
+
+        <activity
+            android:name="com.cqupt.ui.common.AddTestToPlanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            >
+        </activity>
+
+        <activity
+            android:name="com.cqupt.ui.common.PlanDetailActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.PlanActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.FeedbackActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.FullScreenPreviewActivity"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.OnlineLearningActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.common.OnlineLearningDetailActivity"
+            android:screenOrientation="portrait"
+            />
+        <!-- student -->
+
+        <activity
+            android:name="com.cqupt.ui.student.TaskActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity
+            android:name="com.cqupt.ui.student.DoingTaskActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            >
+        </activity>
+        <activity
+            android:name="com.cqupt.ui.student.DoneTaskActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity
+            android:name="com.cqupt.ui.student.TaskDetailActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.student.UploadedFileActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="com.cqupt.ui.student.DownloadFinishedTaskActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <!-- teacher -->
+
+        <activity
+            android:name="com.cqupt.ui.teacher.TeacherDoneTestActivity"
+            android:screenOrientation="portrait"
+
+            />
+
+        <activity
+            android:name="com.cqupt.ui.teacher.StudentUploadedFilesActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.teacher.TeacherMainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.teacher.EditTaskActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.teacher.ArrangeStudentActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.teacher.ArrangeTestActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.teacher.TeacherTaskDetailActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.teacher.ScoreActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.teacher.ScoreTestListActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.cqupt.ui.teacher.UploadAttachmentActivity"
+            android:screenOrientation="portrait"
+            />
+
+    </application>
+
+</manifest>

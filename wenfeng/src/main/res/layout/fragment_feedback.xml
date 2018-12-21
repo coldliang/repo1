@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#F5F5F5"
+    >
+    
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_darkgreen"
+         >
+         
+        <TextView
+            android:id="@+id/returnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:text="@string/mreturn" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:text="@string/make_score" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/saveButton"
+        >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            
+            <com.cqupt.view.FlowLayout
+                android:id="@+id/myHorizontalView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+     
+		    <EditText
+		          android:id="@+id/scoreInput"
+		          android:layout_width="120dp"
+		          android:layout_height="50dp"
+		          android:layout_marginTop="10dp"
+		          android:layout_marginLeft="10dp"
+		          android:layout_marginStart="10dp"
+		          android:gravity="center"
+		          android:padding="3dp"		         
+		          android:ems="3"
+		          android:inputType="number"
+		          android:textColor="@color/my_red"	            
+		          android:background="@drawable/edit_text_style"
+		          android:hint="@string/exercise_score"
+	           />
+		    
+		    <EditText
+		        android:id="@+id/feedBackInput"
+		        android:layout_width="match_parent"
+		        android:layout_height="200dp"
+		        android:layout_margin="10dp"
+		        android:padding="8dp"
+		        android:hint="@string/feedback_hint"
+		        android:gravity="top|start"
+		        android:background="@drawable/edit_text_style"
+		        />
+		    
+		    <TextView
+		        android:id="@+id/timeView"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:padding="10dp"
+		        />
+	            
+	    </LinearLayout>
+	        
+   </ScrollView>
+    
+        
+     <Button
+         android:id="@+id/saveButton"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_alignParentBottom="true"
+         android:layout_margin="10dp"
+         android:layout_centerHorizontal="true"
+         android:background="@drawable/button_style3"
+         android:text="@string/save"
+         />
+        
+    
+
+</RelativeLayout>

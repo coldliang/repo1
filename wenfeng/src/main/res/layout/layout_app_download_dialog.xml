@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<LinearLayout
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="horizontal"
+	    >
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="10dp"
+	        android:paddingRight="8dp"
+	        android:text="@string/app_publish_date" />
+	    <TextView
+	        android:id="@+id/publishDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="2015/1/14" />
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="horizontal"
+	    >
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="10dp"
+	        android:paddingRight="8dp"
+	        android:text="@string/app_version_name" />
+	    <TextView
+	        android:id="@+id/versionName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="1.0" />
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="horizontal"
+	    >
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="10dp"
+	        android:paddingRight="8dp"
+	        android:text="@string/size" />
+	    <TextView
+	        android:id="@+id/size"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="3.5M" />
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="horizontal"
+	    >
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="10dp"
+	        android:paddingRight="8dp"
+	        android:text="@string/new_app_content" />
+	    <TextView
+	        android:id="@+id/content"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="暂无更新内容" />
+	</LinearLayout>
+    
+
+</LinearLayout>

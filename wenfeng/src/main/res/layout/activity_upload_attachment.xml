@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_darkgreen"
+         >
+         
+        <TextView
+            android:id="@+id/returnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="@string/mreturn" />
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:text="@string/upload_attachment" />       
+    </RelativeLayout>
+    
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/includeToolBar"
+        />
+    
+    <include
+        android:id="@+id/includeToolBar"
+        android:layout_above="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        layout="@layout/layout_file_upload_selection"
+        />
+    
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#E8E8E8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+     <Button
+         android:id="@+id/nextButton"
+         android:layout_width="match_parent"
+         android:layout_height="30dp"
+         android:layout_centerInParent="true"
+         android:layout_marginTop="20dp"
+         android:layout_marginLeft="30dp"
+         android:layout_marginStart="30dp"
+         android:layout_marginRight="30dp"         
+         android:textColor="#ffffff"            
+         android:background="@drawable/button_style2"
+         android:text="@string/next_step"
+          />  
+        
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

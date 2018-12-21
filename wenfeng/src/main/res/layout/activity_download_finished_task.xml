@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_darkgreen"
+         >
+         
+        <TextView
+            android:id="@+id/returnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="@string/mreturn" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:text="@string/task_select" />
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:text="@string/cancel" />
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        
+        />        
+    </android.support.v4.widget.SwipeRefreshLayout>
+       
+    <RelativeLayout
+	    android:id="@+id/bottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#ffffff"
+	    android:layout_alignParentBottom="true"
+	    android:paddingTop="5dp"
+		android:paddingBottom="5dp"
+	     >
+      <TextView
+           android:id="@+id/textView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_marginLeft="30dp"
+           android:layout_centerVertical="true"
+           android:text="@string/selected" />
+      <TextView
+          android:id="@+id/selectedTasks"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:layout_toRightOf="@+id/textView"
+          android:layout_centerVertical="true"
+          android:paddingLeft="3dp"
+          android:text="0"
+          />
+      <Button
+            android:id="@+id/downloadButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="28dp"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/textview_border"
+            android:enabled="false"
+            android:text="@string/download" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/empty_exercise"
+        android:textSize="20sp"
+         />
+
+</RelativeLayout>

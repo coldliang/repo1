@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+	    android:id="@+id/top" 
+	    android:layout_alignParentTop="true"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:background="@color/background_darkgreen">
+	  <TextView
+        android:id="@+id/returnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:text="@string/mreturn"
+       />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:text="@string/arrange_test" />
+    
+	</RelativeLayout>
+	
+    <LinearLayout
+	    android:id="@+id/includeTab"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_below="@+id/top"
+	    android:background="#ffffff"
+	    android:layout_marginTop="3dp"
+	    android:baselineAligned="false"
+	    android:layout_marginBottom="1dp"
+	   
+	    >
+        <LinearLayout
+	        android:id="@+id/tab_unselected"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:gravity="center_horizontal"
+	        android:paddingTop="15dp"
+	        >
+	           <TextView
+	            android:id="@+id/tab_unselected_text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="18sp"
+	            android:text="@string/tab_unselected"
+	            android:gravity="center"
+	            
+	            />	          
+	           <ImageView
+	            android:id="@+id/tab_unselected_image"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:visibility="invisible"
+	           	android:background="@drawable/tab_select3"
+	            />
+
+        </LinearLayout>
+        <LinearLayout
+	        android:id="@+id/tab_selected"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:gravity="center_horizontal"
+	        android:paddingTop="15dp"
+	        >
+	           <TextView
+	            android:id="@+id/tab_selected_text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="18sp"
+	            android:text="@string/tab_selected"
+	            android:textColor="@color/background_lightgreen"
+	            android:gravity="center"
+	            />
+
+	        <ImageView
+	            android:id="@+id/tab_selected_image"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/tab_select3"
+	            />
+        </LinearLayout>      
+	</LinearLayout>
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/layout_select_student"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/includeTab"
+        />
+    
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_darkgreen"
+         >
+         
+        <TextView
+            android:id="@+id/userIdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="用户ID"
+             />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:text="@string/plan_list" />
+        
+        <TextView
+            android:id="@+id/sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:text="@string/sync" />
+     
+
+    </RelativeLayout>
+    
+    <include
+        android:id="@+id/includeSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_margin="5dp"
+        layout="@layout/layout_searchbar" />
+    
+    <include
+        android:id="@+id/includeTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/includeSearch"
+        layout="@layout/layout_tab" />
+    
+    <ListView
+        android:id="@+id/list"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/includeTab"
+        android:layout_above="@+id/bottom"
+        />
+    
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/empty_plans"
+        android:textSize="20sp"
+        />
+    
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#E8E8E8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+     <Button
+         android:id="@+id/addButton"
+         android:layout_width="wrap_content"
+         android:layout_height="30dp"
+         android:layout_centerInParent="true"
+         android:layout_marginTop="20dp"         
+         android:textColor="#ffffff"            
+         android:background="@drawable/button_style2"
+         android:text="@string/add_plans"
+          />  
+        
+    </RelativeLayout>
+
+    <ProgressBar
+         android:id="@+id/progressBar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+  		 android:layout_centerInParent="true"
+  		 android:visibility="gone"       
+ 	/>
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:text="@string/key_word" />
+
+    <EditText
+        android:id="@+id/keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView1"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:padding="5dp"
+        android:hint="@string/search_student_keyword_hint"
+        android:background="@drawable/edit_text_style"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/keyword"
+        android:text="@string/academy2"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"       
+        />
+    <Spinner
+        android:id="@+id/DeptSpinner"
+        android:layout_width="213dp"
+        android:layout_height="23dp"
+        android:gravity="center_vertical"
+        android:background="#ffffff"        
+        android:spinnerMode="dialog"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/keyword"   />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView"
+        android:text="@string/my_list"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"       
+        />
+    <Spinner
+        android:id="@+id/myListSpinner"
+        android:layout_width="213dp"
+        android:layout_height="23dp"
+        android:gravity="center_vertical"
+        android:background="#ffffff"        
+        android:spinnerMode="dialog"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignLeft="@+id/DeptSpinner"   />
+    
+    <ImageButton
+        android:id="@+id/searchView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/search_button"
+        android:layout_below="@+id/myListSpinner" />
+
+
+</RelativeLayout>

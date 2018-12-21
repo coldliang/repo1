@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#214C01</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background_lightblue" >#91D2EB</color>
+    <color name="background_darkblue" >#3385FF</color>
+    <color name="background_darkgreen" >#174C01</color>
+    <color name="background_lightgreen" >#1FC40E</color>
+    <color name="divider">#D1D1D1</color>
+    <color name="my_red">#CC0000</color>
+    <color name="dim_foreground_dark">#ffbebebe</color>
+    <color name="spinner_dropdown_default_bc">#F7F7F7</color>
+    <color name="spinner_dropdown_selected_bc">#F0F0F0</color>
+</resources>

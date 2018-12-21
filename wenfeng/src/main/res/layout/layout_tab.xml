@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/includeTab"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    
+	    android:background="#ffffff"
+	    android:layout_marginTop="3dp"
+	    android:baselineAligned="false"
+	    android:layout_marginBottom="1dp"
+	   
+	    >
+        <LinearLayout
+	        android:id="@+id/tab_recent"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:gravity="center_horizontal"
+	        android:paddingTop="15dp"
+	        >
+	         <TextView
+	            android:id="@+id/tab_recent_text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/tab_recent"
+	        	android:textSize="18sp"
+	            android:gravity="center"
+	            />
+	          <ImageView
+	            android:id="@+id/tab_recent_image"
+	            android:layout_width="match_parent"
+	      		android:layout_weight="1"
+	            android:layout_height="0dp"
+	            android:visibility="invisible"
+	            android:background="@drawable/tab_select3"
+	            />
+        </LinearLayout>
+        <LinearLayout
+	        android:id="@+id/tab_doing"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:gravity="center_horizontal"
+	        android:paddingTop="15dp"
+	        >
+	           <TextView
+	            android:id="@+id/tab_doing_text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="18sp"
+	            android:text="@string/tab_doing"
+	            android:textColor="@color/background_lightgreen"
+	            android:gravity="center"
+	            
+	            />
+	          
+	           <ImageView
+	            android:id="@+id/tab_doing_image"
+	            android:layout_width="match_parent"
+	      		android:layout_weight="1"
+	            android:layout_height="0dp"
+	           	android:background="@drawable/tab_select3"
+	            />
+
+        </LinearLayout>
+        <LinearLayout
+	        android:id="@+id/tab_done"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:gravity="center_horizontal"
+	        android:paddingTop="15dp"
+	        >
+	           <TextView
+	            android:id="@+id/tab_done_text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="18sp"
+	            android:text="@string/tab_done"
+	            android:gravity="center"
+	            />
+
+	        <ImageView
+	            android:id="@+id/tab_done_image"
+	            android:layout_width="match_parent"
+	      		android:layout_weight="1"
+	            android:layout_height="0dp"
+	            android:visibility="invisible"
+	            android:background="@drawable/tab_select3"
+	            />
+        </LinearLayout>
+	  
+	       
+	      
+	        
+	</LinearLayout>
+    
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_comment"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        />
+    
+    <RelativeLayout
+		        android:id="@+id/top1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:background="@color/background_darkgreen" >
+				<TextView
+		            android:id="@+id/returnView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:textColor="#ffffff"
+		            android:textSize="20sp"
+		            android:padding="10dp"
+		            android:text="@string/mreturn"
+	            />
+	        	
+	
+	        	<TextView
+		            android:id="@+id/textView1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/comment_title"
+		            android:textColor="#ffffff"
+		            android:textSize="20sp"
+		            android:paddingTop="10dp"
+		            android:paddingBottom="10dp"
+		             />
+	</RelativeLayout>
+	<RelativeLayout
+	    android:id="@+id/top2"
+	    android:background="#ffffff"
+	    android:paddingTop="10dp"
+	    android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top1"
+        android:visibility="invisible"
+        >
+	   <LinearLayout
+	       android:id="@+id/center"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerInParent="true"
+	       android:background="#ffffff"
+	       >
+		<TextView
+		    android:layout_marginLeft="30dp"
+		    android:id="@+id/textView2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/tip_network_unavailable" />
+	     
+		<Button
+		    android:id="@+id/reloadButton"
+		    style="?android:attr/buttonStyleSmall"
+		    android:layout_width="80dp"
+	        android:layout_height="20dp"
+		    android:background="@drawable/textview_border"
+		    android:layout_marginLeft="3dp"
+		    android:text="@string/retry" /> 
+		</LinearLayout>  	
+	</RelativeLayout>
+    <ListView
+        android:id="@+id/commentList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top1"
+        android:layout_above="@+id/bottom"
+        >
+        
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E8E8E8"
+         >
+		<LinearLayout
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    android:background="#E8E8E8"
+		    android:layout_centerInParent="true"
+		    android:paddingBottom="7dp"
+		    
+		    >
+	        <EditText
+	            android:id="@+id/comment"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:padding="3dp"
+	            android:ems="8"
+	            android:layout_marginTop="10dp"
+	            android:background="@drawable/textview_border"
+	            android:layout_marginRight="10dp"
+	            android:hint="@string/make_comment_hint" />
+	
+	        <Button
+	            android:id="@+id/sendButton"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="80dp"
+	            android:layout_height="28dp"
+	            android:layout_marginTop="8dp"
+	            android:background="@drawable/textview_border"
+	            android:text="@string/send" />
+		</LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

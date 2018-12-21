@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:descendantFocusability="beforeDescendants"
+    >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:text="学号|姓名" />
+    <com.cqupt.view.RoundProgressBar
+        android:id="@+id/myProgress"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android_custom:roundColor="#D1D1D1"    
+        android_custom:roundProgressColor="@color/background_lightgreen"    
+        android_custom:textColor="#969696"    
+        android_custom:roundWidth="5dip"    
+        android_custom:textSize="15sp"
+        android_custom:max="10"
+        />
+    
+    <Button
+        android:id="@+id/feedbackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/make_score"
+        android:background="@drawable/textview_border"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="14dp"
+        android:text="@string/submitTime" />
+
+    <TextView
+        android:id="@+id/submitTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="2015/3/12" />
+    
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="14dp"
+        android:text="@string/score2" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="90" />
+    
+    <TextView
+        android:id="@+id/unreadTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp"
+        android:text="@string/unreaded_attachment"
+         />
+    
+    <TextView
+        android:id="@+id/unreadAttachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score"
+        android:layout_toRightOf="@+id/unreadTip"
+        android:layout_toEndOf="@+id/unreadTip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:paddingTop="14dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/background_darkblue"
+        android:text="1"
+        />
+    
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/unreadTip"
+        android:layout_alignBottom="@+id/unreadTip"
+        android:layout_toRightOf="@+id/unreadAttachment"
+        android:layout_toEndOf="@+id/unreadAttachment"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/readed_attachment"
+        />
+    
+    <TextView
+        android:id="@+id/attachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/unreadAttachment"
+        android:layout_alignBottom="@+id/unreadAttachment"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/background_darkblue"
+        android:text="2"
+        />
+
+    <com.cqupt.view.FlowLayout
+        android:id="@+id/itemShowingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/unreadTip"
+        android:layout_alignLeft="@+id/unreadTip"
+        android:layout_alignStart="@+id/unreadTip"
+        />
+    
+    <com.cqupt.view.AttachmentView
+        android:id="@+id/attachmentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemShowingView"
+        android:layout_marginTop="3dp"
+        android:layout_alignLeft="@+id/unreadTip"
+        android:layout_alignStart="@+id/unreadTip"
+        />
+
+</RelativeLayout>

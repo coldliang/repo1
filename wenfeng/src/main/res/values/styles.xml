@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="popupWindowAnimationFadeInBottomToTop">
+        <item name="android:windowEnterAnimation">@anim/bottom_to_top</item>
+        <item name="android:windowExitAnimation">@anim/top_to_bottom</item>
+    </style>
+
+    <style name="popupWindowAnimationFadeInTopToBottom">
+        <item name="android:windowEnterAnimation">@anim/top_to_bottom</item>
+        <item name="android:windowExitAnimation">@anim/bottom_to_top</item>
+    </style>
+
+    <!-- PopupWindow左右弹出的效果-->
+    <style name="popupWindowAnimationFadeInRightToLeft">
+        <item name="android:windowEnterAnimation">@anim/right_to_left</item>
+        <item name="android:windowExitAnimation">@anim/left_to_right</item>
+    </style>
+
+    <style name="Theme.BackgroundTranslucent" parent="android:Theme.Translucent">
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+</resources>

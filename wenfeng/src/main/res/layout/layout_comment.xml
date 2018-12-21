@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="8dp"
+     >
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:textSize="15sp"
+        android:textColor="#969696"
+        android:text="student one" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="18dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="评论内容..." />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/content"
+        android:layout_below="@+id/content"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:textColor="#969696"
+        android:text="2014/11/21 14:05:32" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/time"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/up" />
+
+</RelativeLayout>

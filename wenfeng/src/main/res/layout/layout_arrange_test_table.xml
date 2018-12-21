@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+   
+     <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:background="@color/divider"
+        />
+    
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/title2" />
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/divider"
+        />
+
+    <TextView
+        android:id="@+id/testType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/test_category2" />
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:background="@color/divider"
+        />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/test_level3" />
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:background="@color/divider"
+        />
+
+    <TextView
+        android:id="@+id/domain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/domain" />
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:background="@color/divider"
+        />
+
+    <TextView
+        android:id="@+id/createUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/test_create_teacher_name2" />
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:background="@color/divider"
+        />
+    
+</LinearLayout>

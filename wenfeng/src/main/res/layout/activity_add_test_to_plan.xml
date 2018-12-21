@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+	    android:id="@+id/top" 
+	    android:layout_alignParentTop="true"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:background="@color/background_darkgreen">
+	  <TextView
+        android:id="@+id/returnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:text="@string/mreturn"
+       />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:text="@string/add_test" />
+    
+    <TextView
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:text="@string/reset" />
+	</RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:text="@string/test_type" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toRightOf="@+id/textView2" 
+        android:layout_toEndOf="@+id/textView2"     
+         />
+
+    <LinearLayout
+        android:id="@+id/tableTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="#ffffff"
+            android:text="@string/test_level2" />
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:background="@color/divider"          
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="#ffffff"
+            android:text="@string/added_test" />
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:background="@color/divider"          
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="#ffffff"
+            android:text="@string/available_test" />
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:background="@color/divider"          
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="#ffffff"
+            android:text="@string/test_to_add" />
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/tableTitle"
+        android:descendantFocusability="beforeDescendants"
+        />
+    
+    <RelativeLayout
+	    android:id="@+id/bottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#E8E8E8"
+	    android:layout_alignParentBottom="true"
+	    android:paddingTop="5dp"
+		android:paddingBottom="5dp"
+	     >
+		<Button
+		    android:id="@+id/add"
+		    android:layout_width="wrap_content"
+		   	android:layout_height="30dp"
+	        android:layout_centerInParent="true"
+	        android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_style2"
+		    android:text="@string/confirm" 
+		    />
+    </RelativeLayout>
+    
+		<ProgressBar
+		    android:id="@+id/progressBar"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerInParent="true"
+		    android:visibility="gone"
+		     />
+</RelativeLayout>

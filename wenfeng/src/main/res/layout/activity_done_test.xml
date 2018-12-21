@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+        <RelativeLayout
+		        android:id="@+id/top1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:clickable="true"
+		        android:background="@color/background_darkgreen" >
+	
+	        	<TextView
+		            android:id="@+id/returnView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:textColor="#ffffff"
+		            android:textSize="20sp"
+		            android:padding="10dp"
+		            android:text="@string/mreturn"
+	            />
+	
+	        	<TextView
+		            android:id="@+id/textView1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/answers"
+		            android:textColor="#ffffff"
+		            android:textSize="20sp"
+		            android:paddingTop="10dp"
+		            android:paddingBottom="10dp"
+		             />
+	
+	        	<TextView
+		            android:id="@+id/textView2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_toLeftOf="@+id/menuListView"
+                    android:layout_toStartOf="@+id/menuListView"
+		            android:layout_centerVertical="true"		            
+		            android:textColor="#ffffff"
+		            android:textSize="20sp"
+		            android:paddingTop="10dp"
+		            android:paddingBottom="10dp"
+		             />
+	        	<ImageView
+		       	    android:id="@+id/menuListView"
+		       	    android:layout_width="wrap_content"
+		       	    android:layout_height="wrap_content"	       	    
+		       	    android:layout_alignParentRight="true"
+		       	    android:layout_alignParentEnd="true"
+		       	    android:layout_centerVertical="true"
+		       	    android:layout_margin="10dp"
+		       	    android:src="@drawable/show_menu"
+	       	    />
+	    	</RelativeLayout>
+	  <include
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_width="match_parent"
+	   	    android:layout_below="@+id/top1"
+	   	    android:layout_above="@+id/bottom"
+	   	    layout="@layout/layout_test_handling_content"
+   	    />
+	    <RelativeLayout
+    	    android:id="@+id/bottom"
+    	    android:layout_alignParentBottom="true"
+    	    android:clickable="true"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="#E8E8E8"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp"
+		     >
+
+	    <ImageButton
+	        android:id="@+id/comment"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentStart="true"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginStart="10dp"
+	        android:background="@drawable/comment" >
+	    </ImageButton>
+	    
+	    <ImageView
+	        android:id="@+id/multimediaList"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentEnd="true"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginEnd="10dp"
+	        android:src="@drawable/attachment"
+	        />
+	    	    
+	</RelativeLayout>
+	
+   	<ProgressBar
+       android:id="@+id/progressBar1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+	   android:layout_centerInParent="true"
+       android:visibility="invisible"
+        />
+</RelativeLayout>

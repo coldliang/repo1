@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/fileNameTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/file_name" />
+
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fileNameTip"
+        android:layout_alignBottom="@+id/fileNameTip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/fileNameTip"
+        android:layout_toEndOf="@+id/fileNameTip"
+         />
+
+    <TextView
+        android:id="@+id/timeTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fileNameTip"
+        android:layout_alignStart="@+id/fileNameTip"
+        android:layout_below="@+id/fileNameTip"
+        android:layout_marginTop="20dp"
+        android:text="@string/time" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timeTip"
+        android:layout_alignBottom="@+id/timeTip"
+        android:layout_alignLeft="@+id/fileName"
+        android:layout_alignStart="@+id/fileName"
+        />
+
+    <TextView
+        android:id="@+id/sizeTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/timeTip"
+        android:layout_alignStart="@+id/timeTip"
+        android:layout_below="@+id/timeTip"
+        android:layout_marginTop="20dp"
+        android:text="@string/size" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sizeTip"
+        android:layout_alignBottom="@+id/sizeTip"
+        android:layout_alignLeft="@+id/time"
+        android:layout_alignStart="@+id/time"
+        />
+
+</RelativeLayout>

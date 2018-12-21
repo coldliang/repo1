@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/topic"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            />
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:background="@color/divider"          
+            />
+
+        <TextView
+            android:id="@+id/availableTest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+             />
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:background="@color/divider"          
+            />
+
+        <EditText
+            android:id="@+id/testToAdd"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:padding="10dp"
+             />
+
+    </LinearLayout>
+

@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+  
+     <ImageView
+         android:id="@+id/image"
+         android:layout_height="0dp"
+         android:layout_width="match_parent"
+         android:layout_weight="6"
+         android:background="@drawable/login_bg"
+         />
+     <RelativeLayout
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+        
+         >
+
+    <EditText
+        android:id="@+id/editText2"
+        android:hint="@string/account"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_style"
+        android:layout_alignLeft="@+id/editText1"
+         />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:hint="@string/password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/edit_text_style"
+       />
+
+    <Button
+        android:id="@+id/imageButton1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editText1"
+        android:text="@string/log_in"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_style2" />
+
+    
+
+ 
+    </RelativeLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/login_tip" />
+
+</LinearLayout>
